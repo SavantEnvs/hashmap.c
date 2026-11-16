@@ -1,0 +1,9 @@
+project: savantenvs/hashmap.c
+target: hashmap_hash
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/hashmap_hash/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_hashmap_hash
+    libfuzzer: true
+    timeout: 5
